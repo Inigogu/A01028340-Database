@@ -4,12 +4,12 @@ import csv
 import numpy as np
 paisesGEI = [""]
 paisesPoblados = [""]
-numeros = [0]
+numeros = [0, 0]
 
 with open("TextFiles/populationbycountry19802010millions.csv") as csvPopulation:
      reader = csv.reader(csvPopulation)
      for row in reader:
-          if row[30] > numeros[0]:
+          if row[29] > numeros[0]:
                numeros.insert(0,row[30])
                paisesPoblados.insert(0,row[0])
           elif row[30] > numeros[1]:
